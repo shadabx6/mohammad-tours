@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 120 100% 10%;
+    --primary: 48 64% 53%;
+    --primary-foreground: 120 100% 10%;
+    --emerald: 145 54% 55%;
+    --gold: 48 64% 53%;
+    --dark-green: 120 100% 10%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    --secondary: 40 100% 95%;
+    --secondary-foreground: 120 100% 10%;
+    --muted: 40 100% 95%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 40 100% 95%;
+    --accent-foreground: 120 100% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 48 64% 53%;
+    --input: 48 64% 53%;
+    --ring: 145 54% 55%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#f4ead5] text-[#1a3c34] font-sans leading-relaxed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-[#d4af37];
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  }
+  .emerald-gradient {
+    background: linear-gradient(to bottom, rgba(0, 40, 0, 0.8), rgba(0, 60, 0, 0.6));
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #d4af37 0%, #f4ead5 50%, #d4af37 100%);
+  }
+  .dark-green-section {
+    @apply bg-[#002d1f] text-white relative;
+    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+  }
+  .package-card-shadow {
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+  }
+  .textured-bg {
+    background-color: #fcfaf5;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+  }
+  .islamic-pattern {
+    background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+    opacity: 0.05;
+  }
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
